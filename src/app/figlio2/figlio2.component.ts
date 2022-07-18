@@ -10,11 +10,16 @@ export class Figlio2Component implements OnInit {
   numero:number=10;
 
   @Output() evento=new EventEmitter<number>;
+  x:boolean=false;
 
   constructor() { }
 
   emetti(){
     this.evento.emit(this.numero)
+  }
+
+  cambiaBoolean(){
+    this.x=!this.x;
   }
 
   ngOnInit(): void {
