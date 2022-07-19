@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Persona } from './persona';
 
 @Component({
   selector: 'app-root',
@@ -21,6 +22,13 @@ export class AppComponent {
       citta:'catania'
     }
   ]
+
+  persona:Persona={
+    nome:'orazio',
+    cognome:'ventrella',
+    citta:'catania',
+  }
+
 
   riceviEvento (numero: Number){
     this.valorePreso=numero;

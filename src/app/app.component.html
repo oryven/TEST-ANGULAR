@@ -13,7 +13,6 @@
 <div [ngSwitch]="'orazio'">
   <p *ngSwitchCase="'orazio'">SWITCH TRUE</p>
   <p *ngSwitchCase="'ventrella'">switch false</p>
-
 </div>
 
 {{title}}
@@ -21,4 +20,6 @@
 {{valorePreso}}
 
 <app-figlio2 (evento)="riceviEvento($event)"></app-figlio2>
+
+<app-form></app-form>
 
