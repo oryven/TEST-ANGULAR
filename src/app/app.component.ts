@@ -8,7 +8,7 @@ import { Persona } from './persona';
 })
 export class AppComponent {
   title = 'ciao';
-
+  nome='';
   valorePreso: Number | undefined;
 
   lista:any[]=[
