@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { TestServiceService } from '../test-service.service';
 
 @Component({
   selector: 'app-figlio2',
@@ -12,7 +13,10 @@ export class Figlio2Component implements OnInit {
   @Output() evento=new EventEmitter<number>;
   x:boolean=false;
 
-  constructor() { }
+  constructor(private testService:TestServiceService) { }
+
+  // oppure
+  // testService= new TestServiceService;
 
   emetti(){
     this.evento.emit(this.numero)
@@ -23,6 +27,9 @@ export class Figlio2Component implements OnInit {
   }
 
   ngOnInit(): void {
+   console.log(this.testService.addiziona())
   }
+
+
 
 }
