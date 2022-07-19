@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Persona } from '../persona';
+import { FormGroup, FormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-form',
@@ -8,7 +9,22 @@ import { Persona } from '../persona';
 })
 export class FormComponent implements OnInit {
   persona:Persona=new Persona;
-  constructor() { }
+
+  fg:FormGroup;
+
+  constructor() {
+    this.fg=new FormGroup(
+      {
+        nome:new FormControl(),
+        cognome: new FormControl(),
+        eta:new FormControl()
+      }
+    );
+  }
+
+  leggi(x:any){
+    console.log(x)
+  }
 
   ngOnInit(): void {
   }

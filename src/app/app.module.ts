@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { FiglioComponent } from './figlio/figlio.component';
 import { Figlio2Component } from './figlio2/figlio2.component';
 import { FormComponent } from './form/form.component';
+import { ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FormComponent } from './form/form.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

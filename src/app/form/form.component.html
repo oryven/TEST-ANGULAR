@@ -7,3 +7,12 @@
 
   <button [disabled]="form.invalid" (click)="invia(form.value)">invia</button>
 </form>
+
+
+<form [formGroup]="fg" >
+  <input type="text" formControlName="nome">
+  <input type="text" formControlName="cognome">
+  <input type="text" formControlName="eta">
+
+  <button (click)="leggi(fg.value)" >invia</button>
+</form>
