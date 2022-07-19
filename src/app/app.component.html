@@ -1,5 +1,21 @@
 <app-figlio [valorePadre]="title"></app-figlio>
 
+<div *ngIf="true">
+  <p>prova</p>
+</div>
+
+<div *ngFor="let dati of lista">
+ {{dati.nome}}
+ {{dati.cognome}}
+ {{dati.citta}}
+</div>
+
+<div [ngSwitch]="'orazio'">
+  <p *ngSwitchCase="'orazio'">SWITCH TRUE</p>
+  <p *ngSwitchCase="'ventrella'">switch false</p>
+
+</div>
+
 {{title}}
 
 {{valorePreso}}

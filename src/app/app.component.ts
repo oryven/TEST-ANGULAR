@@ -10,6 +10,18 @@ export class AppComponent {
 
   valorePreso: Number | undefined;
 
+  lista:any[]=[
+    {
+      nome:'orazio'
+    },
+    {
+      cognome:'ventrella'
+    },
+    {
+      citta:'catania'
+    }
+  ]
+
   riceviEvento (numero: Number){
     this.valorePreso=numero;
   }
