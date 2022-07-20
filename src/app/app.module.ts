@@ -8,6 +8,7 @@ import { FormComponent } from './form/form.component';
 import { ReactiveFormsModule} from '@angular/forms';
 import { TestPipe } from './test.pipe';
 import { HttpClientModule } from '@angular/common/http';
+import { RootingModule } from './rooting/rooting.module';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    RootingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

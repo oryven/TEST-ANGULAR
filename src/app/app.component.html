@@ -25,8 +25,20 @@
 
 {{nome | test}}
 
-<button (click)="get()"> get</button>
+
 
 <div *ngFor="let persona of persone">
   {{persona | json}}
  </div>
+
+<div>
+  <button (click)="get()"> get</button>
+
+  <button (click)="post()"> post</button>
+
+  <button (click)="aggiorna()"> aggiorna</button>
+
+  <button (click)="getById()">get by id</button>
+</div>
+
+<p> persona presa tramite id {{personaSingola | json}}</p>

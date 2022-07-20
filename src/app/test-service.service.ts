@@ -23,4 +23,12 @@ export class TestServiceService {
   post(persona:Persona):Observable<Persona>{
     return this.httpClient.post<Persona>(this.url,persona)
   }
+
+  aggiornamento(persona:Persona,id: number):Observable<Persona>{
+    return this.httpClient.put<Persona>(this.url+'/'+id,persona)
+  }
+
+  getById(id:number):Observable<Persona>{
+    return this.httpClient.get<Persona>(this.url+'/'+id)
+  }
 }

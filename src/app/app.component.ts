@@ -13,6 +13,7 @@ export class AppComponent {
   valorePreso: Number | undefined;
 
   persone: Persona[] = [];
+  personaSingola: Persona | undefined;
 
   constructor (private TestService:TestServiceService) {
 
@@ -20,6 +21,29 @@ export class AppComponent {
 
   get(){
   this.TestService.getAll().subscribe((persona)=>{this.persone=persona})
+  }
+
+  post(){
+
+    let persona= new Persona()
+    persona.nome='pippo';
+    persona.cognome='rossi';
+    persona.eta='40';
+
+    this.TestService.post(persona).subscribe()
+  }
+
+  aggiorna(){
+    let persona= new Persona()
+    persona.nome='pluto';
+    persona.cognome='rossi';
+    persona.eta='40';
+
+    this.TestService.aggiornamento(persona,33).subscribe()
+  }
+
+  getById(){
+    this.TestService.getById(32).subscribe((personaRicevuta)=>this.personaSingola=personaRicevuta)
   }
 
   lista:any[]=[
@@ -30,11 +54,12 @@ export class AppComponent {
       cognome:'ventrella'
     },
     {
-      citta:'30'
+      citta:'catania'
     }
   ]
 
   persona:Persona={
+    id:30,
     nome:'orazio',
     cognome:'ventrella',
     eta:'28',
