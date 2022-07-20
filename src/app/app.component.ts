@@ -1,3 +1,4 @@
+import { TestServiceService } from './test-service.service';
 import { Component } from '@angular/core';
 import { Persona } from './persona';
 
@@ -11,6 +12,16 @@ export class AppComponent {
   nome='';
   valorePreso: Number | undefined;
 
+  persone: Persona[] = [];
+
+  constructor (private TestService:TestServiceService) {
+
+  }
+
+  get(){
+  this.TestService.getAll().subscribe((persona)=>{this.persone=persona})
+  }
+
   lista:any[]=[
     {
       nome:'orazio'
@@ -19,14 +30,14 @@ export class AppComponent {
       cognome:'ventrella'
     },
     {
-      citta:'catania'
+      citta:'30'
     }
   ]
 
   persona:Persona={
     nome:'orazio',
     cognome:'ventrella',
-    citta:'catania',
+    eta:'28',
   }
 
 

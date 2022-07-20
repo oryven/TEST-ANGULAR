@@ -7,6 +7,7 @@ import { Figlio2Component } from './figlio2/figlio2.component';
 import { FormComponent } from './form/form.component';
 import { ReactiveFormsModule} from '@angular/forms';
 import { TestPipe } from './test.pipe';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,12 +15,14 @@ import { TestPipe } from './test.pipe';
     FiglioComponent,
     Figlio2Component,
     FormComponent,
-    TestPipe
+    TestPipe,
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

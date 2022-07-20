@@ -3,7 +3,7 @@
 <form #form="ngForm">
   <input required [(ngModel)]="persona.nome" name="name">
   <input required [(ngModel)]="persona.cognome" name="cognome">
-  <input required [(ngModel)]="persona.citta" name="città">
+  <input required [(ngModel)]="persona.eta" name="età">
 
   <button [disabled]="form.invalid" (click)="invia(form.value)">invia</button>
 </form>
