@@ -1,6 +1,7 @@
 import { TestServiceService } from './test-service.service';
 import { Component } from '@angular/core';
 import { Persona } from './persona';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,7 @@ export class AppComponent {
   persone: Persona[] = [];
   personaSingola: Persona | undefined;
 
-  constructor (private TestService:TestServiceService) {
+  constructor (private TestService:TestServiceService, private router:Router) {
 
   }
 
@@ -68,5 +69,12 @@ export class AppComponent {
 
   riceviEvento (numero: Number){
     this.valorePreso=numero;
+  }
+
+  goToSon(){
+    this.router.navigateByUrl('/figlio')
+  }
+  goToSon2(){
+    this.router.navigateByUrl('/figlio2')
   }
 }

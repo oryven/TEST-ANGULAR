@@ -1,7 +1,7 @@
-<app-figlio [valorePadre]="title"></app-figlio>
+<!-- <app-figlio [valorePadre]="title"></app-figlio> -->
 
 <div *ngIf="true">
-  <p>prova</p>
+  <p>prova ngIf</p>
 </div>
 
 <div *ngFor="let dati of lista">
@@ -18,10 +18,11 @@
 {{title}}
 
 {{valorePreso}}
-
-<app-figlio2 (evento)="riceviEvento($event)"></app-figlio2>
+<!--
+<app-figlio2 (evento)="riceviEvento($event)"></app-figlio2> -->
 
 <app-form></app-form>
+
 
 {{nome | test}}
 
@@ -42,3 +43,21 @@
 </div>
 
 <p> persona presa tramite id {{personaSingola | json}}</p>
+
+
+
+<button [routerLink]="[{ outlets: {uscita1:['figlio']} }]">figlio1</button>
+<button [routerLink]="[{ outlets: {uscita2:['figlio2']} }]">figlio2</button>
+
+
+<!-- <button routerLink="figlio1">figlio1</button>
+<button routerLink="figlio2">figlio2</button> -->
+
+
+<button (click)="goToSon()">figlio con metodo</button>
+<button (click)="goToSon2()">figlio2 con metodo</button>
+
+<!-- <router-outlet></router-outlet> -->
+
+<router-outlet name="uscita1"></router-outlet>
+<router-outlet name="uscita2"></router-outlet>
